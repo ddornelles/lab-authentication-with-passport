@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+<h2>Signup</h2>
+<hr>
+<form action="/passport/signup" method="POST" id="form-container">
+  <p>
+    <label for="username">Username</label>
+    <input id="username" type="text" name="username" placeholder="Your username">
+  </p>
+
+  <p>
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password" placeholder="Your password">
+  </p>
+
+  <p>
+    {{#if message}}
+      <div class="error-message">{{ message }}</div>
+    {{/if}}
+  </p>
+
+  <button>Create account</button>
+</form>
+
+<p class="account-message">Do you already have an account? <a href="/auth/login">Login</a></p>
+
+  <p><a href="/">Return</a></p>
